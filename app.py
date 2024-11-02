@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from telebot import types  
 from config import keys
 
-
 load_dotenv() 
 
 
@@ -60,6 +59,7 @@ def create_main_menu():
     markup.add(types.KeyboardButton("/help"))
     markup.add(types.KeyboardButton("/values"))
     return markup
+
 
 @bot.message_handler(commands=['start'])
 def start(message: telebot.types.Message):
